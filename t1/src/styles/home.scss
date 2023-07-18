@@ -5,3 +5,8 @@
   text-indent: 50px;
   font-size: larger;
 }
+.homePage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}

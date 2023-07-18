@@ -49,14 +49,14 @@ getNumbers();
   <div class="homePage">
     <div class="header">This is the Homepage</div>
     <p class="indentedP">
-      {{ !names ? "No names yet" : "Big shoutout to the following: " + names }}
+      {{ !names ? "No names yet" : "Registered names: " + names }}
     </p>
     <p class="indentedP">
-      {{ !emails ? "No emails yet" : "Send a mail to these emails: " + emails }}
+      {{ !emails ? "No emails yet" : "Registered emails: " + emails }}
     </p>
     <p class="indentedP">
       {{
-        !phoneNos ? "No phone # yet" : "Contact these phone nos: " + phoneNos
+        !phoneNos ? "No phone # yet" : "Registered contacts: " + phoneNos
       }}
     </p>
   </div>

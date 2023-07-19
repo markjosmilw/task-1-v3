@@ -26,6 +26,7 @@ const postBasicInfo = async (ctx) => {
     await knex("basicinfo").insert({ name, age, address });
     ctx.body = "Your basic information is received!";
   } catch (error) {
+    //error condition
     ctx.status = 500;
     ctx.body = error.details[0].message;
   }
@@ -36,3 +37,5 @@ module.exports = {
   getBasicInfo,
   postBasicInfo,
 };
+
+//lodash

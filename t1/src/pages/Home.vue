@@ -8,6 +8,7 @@ const handleNames = async () => {
   await axios
     .get("http://localhost:8000/api/infos")
     .then((res) => {
+      console.log(res.data);
       const allNames = res.data.map((each) => each.name);
       names.value = allNames;
       names.value = names.value.join(", ");
@@ -28,6 +29,8 @@ const getEmails = async () => {
       console.log(error);
     });
 };
+
+//if using await do not use .then()
 const getNumbers = async () => {
   await axios
     .get("http://localhost:8000/api/contacts")
@@ -55,10 +58,22 @@ getNumbers();
       {{ !emails ? "No emails yet" : "Registered emails: " + emails }}
     </p>
     <p class="indentedP">
-      {{
-        !phoneNos ? "No phone # yet" : "Registered contacts: " + phoneNos
-      }}
+      {{ !phoneNos ? "No phone # yet" : "Registered contacts: " + phoneNos }}
     </p>
+    <!-- <div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+      </table>
+    </div> -->
   </div>
 </template>
 

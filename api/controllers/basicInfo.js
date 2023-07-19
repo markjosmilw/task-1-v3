@@ -6,6 +6,7 @@ const basicInfoSchema = Joi.object({
   age: Joi.number().min(1).max(100).required(),
   address: Joi.string().min(5).required()
 });
+//
 
 const getBasicInfos = async (ctx) => {
   try {
